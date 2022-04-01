@@ -2,3 +2,5 @@ env
 *checkpoint.ipynb*
 *.pyc
 *.DS_Store
+C4 - Convolutional Neural Networks/Week 4/Neural Style Transfer/pretrained-model/imagenet-vgg-verydeep-19.mat
+C4 - Convolutional Neural Networks/Week 4/Neural Style Transfer/pretrained-model/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5
