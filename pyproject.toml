@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "coursera-deep-learning-specialization"
+version = "0.1.0"
+description = ""
+authors = ["anhtuan23 <dotuananh.dta@gmail.com>"]
+readme = "README.md"
+packages = [{include = "coursera_deep_learning_specialization"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+numpy = "^1.25.2"
+ipykernel = "^6.25.2"
+matplotlib = "^3.7.2"
+h5py = "^3.9.0"
+scipy = "^1.11.2"
+pillow = "^10.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
