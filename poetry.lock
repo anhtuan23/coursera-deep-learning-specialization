@@ -152,6 +152,17 @@ files = [
 pycparser = "*"
 
 [[package]]
+name = "chardet"
+version = "5.2.0"
+description = "Universal encoding detector for Python 3"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "chardet-5.2.0-py3-none-any.whl", hash = "sha256:e1cf59446890a00105fe7b7912492ea04b6e6f06d4b742b2c788469e34c82970"},
+    {file = "chardet-5.2.0.tar.gz", hash = "sha256:1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"},
+]
+
+[[package]]
 name = "charset-normalizer"
 version = "3.3.0"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
@@ -835,6 +846,22 @@ files = [
 ]
 
 [[package]]
+name = "jsonpickle"
+version = "3.0.2"
+description = "Python library for serializing any arbitrary object graph into JSON"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "jsonpickle-3.0.2-py3-none-any.whl", hash = "sha256:4a8442d97ca3f77978afa58068768dba7bff2dbabe79a9647bc3cdafd4ef019f"},
+    {file = "jsonpickle-3.0.2.tar.gz", hash = "sha256:e37abba4bfb3ca4a4647d28bb9f4706436f7b46c8a8333b4a718abafa8e46b37"},
+]
+
+[package.extras]
+docs = ["jaraco.packaging (>=3.2)", "rst.linker (>=1.9)", "sphinx"]
+testing = ["ecdsa", "feedparser", "gmpy2", "numpy", "pandas", "pymongo", "pytest (>=3.5,!=3.7.3)", "pytest-black-multipy", "pytest-checkdocs (>=1.2.3)", "pytest-cov", "pytest-flake8 (>=1.1.1)", "scikit-learn", "sqlalchemy"]
+testing-libs = ["simplejson", "ujson"]
+
+[[package]]
 name = "jupyter-client"
 version = "8.3.1"
 description = "Jupyter protocol implementation and client libraries"
@@ -1179,6 +1206,33 @@ files = [
 ]
 
 [[package]]
+name = "mido"
+version = "1.3.0"
+description = "MIDI Objects for Python"
+optional = false
+python-versions = "~=3.7"
+files = [
+    {file = "mido-1.3.0-py3-none-any.whl", hash = "sha256:a710a274c8a1a3fd481f526d174a16e117b5e58d719ad92937a67fb6167a9432"},
+    {file = "mido-1.3.0.tar.gz", hash = "sha256:84282e3ace34bca3f984220db2dbcb98245cfeafb854260c02e000750dca86aa"},
+]
+
+[package.dependencies]
+packaging = ">=23.1,<24.0"
+
+[package.extras]
+build-docs = ["sphinx (>=4.3.2,<4.4.0)", "sphinx-rtd-theme (>=1.2.2,<1.3.0)"]
+check-manifest = ["check-manifest (>=0.49)"]
+dev = ["mido[build-docs]", "mido[check-manifest]", "mido[lint-code]", "mido[lint-reuse]", "mido[release]", "mido[test]"]
+lint-code = ["flake8 (>=5.0.4,<5.1.0)"]
+lint-reuse = ["reuse (>=1.1.2,<1.2.0)"]
+ports-all = ["mido[ports-pygame]", "mido[ports-rtmidi-python]", "mido[ports-rtmidi]"]
+ports-pygame = ["PyGame (>=2.5,<3.0)"]
+ports-rtmidi = ["python-rtmidi (>=1.5.4,<1.6.0)"]
+ports-rtmidi-python = ["rtmidi-python (>=0.2.2,<0.3.0)"]
+release = ["twine (>=4.0.2,<4.1.0)"]
+test-code = ["pytest (>=7.4.0,<7.5.0)"]
+
+[[package]]
 name = "ml-dtypes"
 version = "0.2.0"
 description = ""
@@ -1209,6 +1263,38 @@ numpy = {version = ">=1.21.2", markers = "python_version > \"3.9\""}
 
 [package.extras]
 dev = ["absl-py", "pyink", "pylint (>=2.6.0)", "pytest", "pytest-xdist"]
+
+[[package]]
+name = "more-itertools"
+version = "10.1.0"
+description = "More routines for operating on iterables, beyond itertools"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "more-itertools-10.1.0.tar.gz", hash = "sha256:626c369fa0eb37bac0291bce8259b332fd59ac792fa5497b59837309cd5b114a"},
+    {file = "more_itertools-10.1.0-py3-none-any.whl", hash = "sha256:64e0735fcfdc6f3464ea133afe8ea4483b1c5fe3a3d69852e6503b43a0b222e6"},
+]
+
+[[package]]
+name = "music21"
+version = "9.1.0"
+description = "A Toolkit for Computer-Aided Musical Analysis and Computational Musicology."
+optional = false
+python-versions = ">=3.10"
+files = [
+    {file = "music21-9.1.0-py3-none-any.whl", hash = "sha256:f3d312159be73867bd86fb0b6f201fc7285e5f6886d6f0c0a115eeeff0e67741"},
+    {file = "music21-9.1.0.tar.gz", hash = "sha256:6c61425c7af5bf54e120afebabcffdb22be32620b0ea22b0d8e36ac5eafaefc8"},
+]
+
+[package.dependencies]
+chardet = "*"
+joblib = "*"
+jsonpickle = "*"
+matplotlib = "*"
+more-itertools = "*"
+numpy = "*"
+requests = "*"
+webcolors = ">=1.5"
 
 [[package]]
 name = "nest-asyncio"
@@ -1754,6 +1840,17 @@ files = [
 
 [package.dependencies]
 pyparsing = ">=2.1.4"
+
+[[package]]
+name = "pydub"
+version = "0.25.1"
+description = "Manipulate audio with an simple and easy high level interface"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pydub-0.25.1-py2.py3-none-any.whl", hash = "sha256:65617e33033874b59d87db603aa1ed450633288aefead953b30bded59cb599a6"},
+    {file = "pydub-0.25.1.tar.gz", hash = "sha256:980a33ce9949cab2a569606b65674d748ecbca4f0796887fd6f46173a7b0d30f"},
+]
 
 [[package]]
 name = "pyflakes"
@@ -2439,6 +2536,21 @@ files = [
 ]
 
 [[package]]
+name = "webcolors"
+version = "1.13"
+description = "A library for working with the color formats defined by HTML and CSS."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "webcolors-1.13-py3-none-any.whl", hash = "sha256:29bc7e8752c0a1bd4a1f03c14d6e6a72e93d82193738fa860cbff59d0fcc11bf"},
+    {file = "webcolors-1.13.tar.gz", hash = "sha256:c225b674c83fa923be93d235330ce0300373d02885cef23238813b0d5668304a"},
+]
+
+[package.extras]
+docs = ["furo", "sphinx", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-notfound-page", "sphinxext-opengraph"]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
 name = "werkzeug"
 version = "3.0.0"
 description = "The comprehensive WSGI web application library."
@@ -2545,4 +2657,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.11"
-content-hash = "c0ee409c1578e49fef41f11cca433d429816cd489767d1bf64f03b16d28f0aaf"
+content-hash = "38568d06a51281735096bd38e077dc495fb89cb73de6da134330d4cab1e80fdf"
